@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
 
-const userSchema = new Schema({
+const userSchema = new mongoose.Schema({
   googleId: String,
   displayName: String
 });
 
-mongoose.model('User', userSchema);
+module.exports = mongoose.model('User', userSchema);
